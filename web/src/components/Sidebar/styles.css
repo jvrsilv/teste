@@ -1,39 +1,16 @@
+
 #sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    max-width: 350px;
-    background: rgb(27, 23, 23);
-    opacity: 1;
-    z-index: 999;
-    padding: 15px 0;
-}
-
-#sidebar svg {
-    position: absolute;
-    right: 0;
-    top: 5px;
-    cursor: pointer;
-}
-
-#sidebar .logoImg {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #4b4848;
-    padding: 15px 10px 25px;    
+    width: 25vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(27, 23, 23);
 }
 
-#sidebar .logoImg img {
-    width: 250px;
-    height: 80px;
-}
-
-#sidebar .sidebar-menu {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 15px 5px;
+@media (max-width: 1200px) {
+    #sidebar {
+        display: none;
+    }    
 }

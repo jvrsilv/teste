@@ -4,34 +4,34 @@ import { FaBars } from 'react-icons/fa';
 import logoImg from '../../assets/Logo.png';
 import userImg from '../../assets/User.png';
 
-import Sidebar from '../Sidebar';
 
 import './styles.css';
+import Sidebar from '../Sidebar';
 
 const Header = (props) => {
-    
+
     return (
         <>
-            <header id="header-container">
-                <div className="header-logo">
-                    <img src={logoImg} alt="logo" />
-                    <FaBars size={40} onClick={props.setVisibleSidebar} />
+        <header id="header-container">
+            <div className="header-logo">
+                <FaBars size={40} onClick={props.setVisibleSidebar} />
+                <img src={logoImg} alt="logo" />
+            </div>
+
+            <div className="header-content">
+                <div className="infoUser">
+                    <strong>Kevin Pagliuca</strong>
+                    <p>kevin.pagliuca@imbecor.com</p>
+                    <p>Estagiário de TI</p>
                 </div>
 
-                <div className="header-content">
-                    <div className="infoUser">
-                        <strong>Kevin Pagliuca</strong>
-                        <p>kevin.pagliuca@imbecor.com</p>
-                        <p>Estagiário de TI</p>
-                    </div>
-
-                    <div className="imgUser">
-                        <img src={userImg} alt="imgUser" />
-                    </div>
+                <div className="imgUser">
+                    <img src={userImg} alt="imgUser" />
                 </div>
-            </header>
-            {props.sidebarVisible === true ? <Sidebar fechar={props.setVisibleSidebar} /> : null}     
-
+            </div>
+            {/* {props.sidebarVisible === true ? <Sidedrawer fechar={props.setVisibleSidebar} click={props.sidebarVisible} /> : null} */}
+        </header>
+        <Sidebar />
         </>
     );
 }

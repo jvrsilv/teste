@@ -1,28 +1,12 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-import { FaAngleDown, FaTimes } from 'react-icons/fa';
-
-import logoImg from '../../assets/Logo.png';
-import Backdrop from '../Backdrop';
+import React from 'react';
 
 import './styles.css';
 
-const Sidebar = (props) => {    
+const Sidebar = () => {
     return (
-        <>
-            <Backdrop />
-            <div id="sidebar">
-                <FaTimes size={30} color="#F31212" onClick={props.fechar} />
-                <div className="logoImg">
-                    <img src={logoImg} alt="logo" />
+        <div id="sidebar">
 
-                </div>
-
-                <div className="sidebar-menu">
-
-                </div>
-            </div>
-        </>
+        </div>
     );
 }
 
